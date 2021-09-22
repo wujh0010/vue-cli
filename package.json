@@ -1,8 +1,8 @@
 {
-  "name": "prime-component",
+  "name": "vue-cli",
   "version": "0.1.0",
   "private": false,
-  "main": "lib/selling-b-component.umd.min.js",
+  "main": "lib/@jd.selling-cli.umd.min.js",
   "files": [
     "lib"
   ],
