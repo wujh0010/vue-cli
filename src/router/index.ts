@@ -20,10 +20,13 @@ const routes: Array<RouteConfig> = [
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const makeRouter = (props: any) => {
+  return new VueRouter({
+    mode: 'history',
+    base: window.__POWERED_BY_QIANKUN__ ? props.baseRoute : process.env.BASE_URL,
+    routes
+  })
+}
 
-export default router
+export default makeRouter
